@@ -3,6 +3,7 @@
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
     color: #747474;
+    margin: 0;
 }
 
 /* header */
@@ -20,7 +21,7 @@ header {
 }
 
 main {
-    z-index: 1;
+    z-index: 5;
 }
 
 /* max-width every slide */  /*  */
@@ -197,5 +198,57 @@ li {
 
 /* info */
 .info {
-    background-color: #E5FAF8;;
+    background-color: #d5f4f1;
+    background-image: url(./img/docplanner-logo-big.png);
+    background-repeat: no-repeat;
+    background-position: bottom -65% left 13%;
+}
+
+.max-height {
+    min-height: 80vh;
+}
+
+.info-wrapper {
+    padding-top: 25px;
+    display: flex;
+}
+
+.info-left {
+    width: 50%;
+}
+
+.info-right {
+    min-height: 100%;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.info-right-content {
+    display: flex;
+    flex-basis: calc(50% - 50px);
+    justify-content: center;
+    flex-direction: column;
+}
+
+.one,
+.two,
+.three,
+.four {
+    background-color: #FFFFFF;
+    width: 50px;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.one, 
+.three {
+    /* justify-content: center; */
+    margin-right: 20px;
+}
+
+.two,
+.four {
+    margin-left: 20px;
 }
