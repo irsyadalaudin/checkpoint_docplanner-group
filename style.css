@@ -5,6 +5,7 @@
     color: #747474;
 }
 
+/* header */
 header {
     position: fixed;
     top: 0;
@@ -22,7 +23,7 @@ main {
     z-index: 1;
 }
 
-/*  */ /*  */
+/* max-width every slide */  /*  */
 .max-width {
     zoom: 1;
     max-width: 980px;
@@ -36,6 +37,8 @@ main {
     margin-top: 15px;
 }
 
+
+/* navbar */
 nav {
     height: 70px;
     display: flex;
@@ -62,7 +65,8 @@ nav {
     color: #ababab;
 }
 
-/*  */
+
+/* container-introduction */
 .container-introduction {
     margin-top: 100px;
 }
@@ -98,7 +102,7 @@ h1 {
 }
 
 
-/*  */
+/* container-card */
 .container-card {
     display: flex;
     /* height: 345px; */
@@ -150,3 +154,6 @@ h1 {
     width: 25px;
     height: 25px;
 }
+
+
+/* container-logo */
