@@ -157,3 +157,39 @@ h1 {
 
 
 /* container-logo */
+.container-logo {
+    display: flex;
+}
+
+.container-logo > h1 {
+    font-size: 26px;
+    width: 30%;
+    margin-top: 60px;
+    padding-right: 16px;
+}
+
+.logo {
+    width: 70%;
+}
+
+ul {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    width: calc(100% / 4);
+}
+    
+svg {        
+    fill:#747474;
+}
+
+a > img {
+    filter: grayscale(100%);
+}
