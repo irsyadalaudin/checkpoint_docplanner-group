@@ -186,10 +186,16 @@ li {
     width: calc(100% / 4);
 }
     
-svg {        
+.svg-color {        
     fill:#747474;
 }
 
-a > img {
+.img-color {
     filter: grayscale(100%);
+}
+
+
+/* info */
+.info {
+    background-color: #E5FAF8;;
 }
