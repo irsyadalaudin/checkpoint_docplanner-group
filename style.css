@@ -88,7 +88,6 @@ h1 {
     color: #00B39B;
     margin: 40px 0;
     font-weight: 300;
-    /* letter-spacing: -.3px; */
 }
 
 .introduction-down {
@@ -99,7 +98,7 @@ h1 {
 .introduction-down > p {
     width: 50%;
     margin: 12px 5px;
-    padding: px;
+    /* padding: px; */
 }
 
 
@@ -113,21 +112,54 @@ h1 {
     /* justify-content: center; */
     /* align-content: center; */
     margin-top: 80px;
+    /* flex-direction: row */
 }
 
 .card {
+    display: flex;
     flex-direction: column;
     overflow: hidden;
     padding: 32px 32px 0;
     border-radius: 10px;
     margin: 0 10px;
-    height: 300px;
+    min-height: 300px;
     width: 100%;
 }
 
-.card ~ h2 {
+.card > h1 {
+    /* font-weight: 400; */
+    color: white;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 400;
+    font-size: 1.6em;
+    margin: 0;
+    padding-top: 10px;
 }
+
+.card > p {
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    padding-top: 20px;
+
+}
+
+.dropdown-card {
+    border: 3px solid #8AC007;
+    display: flex;
+    justify-content: center;
+    flex-basis: 100px;
+    justify-content: left;
+    align-items: flex-end;
+    position: relative;
+}
+
+.dropdown-right {
+    margin-bottom: 10px;
+}
+
+/* background: no-repeat url(/icons/icon-caret-white.svg) 50% 50%; */
 
 .left {
     background-color: #00CCB1;
@@ -201,11 +233,18 @@ li {
 .svg-color {        
     fill:#747474;
 }
+.svg-color:hover{  
+    fill: #00CCB1;  
+
+}
 
 .img-color {
     filter: grayscale(100%);
 }
 
+.img-color:hover {
+    filter: grayscale(0);
+}
 
 /* container-info */
 .container-info {
@@ -319,12 +358,6 @@ li {
 
 
 
-
-
-
-
-
-
 /* container-city */
 .city-up {
     text-align: center;
@@ -351,7 +384,16 @@ li {
 .city-center {
     display: grid;
     grid-template-columns: repeat(3, 300px);
-    grid-template-rows: repeat(3, 270px);
+    grid-template-rows: 270px 25px 270px 25px 270px 25px;
+    grid-gap: 30px;
+}
+
+/* .city-center:hover {
+
+} */
+
+.city-center-img > img {
+    border-radius: 5px;
 }
 
 .warsaw {
@@ -359,4 +401,120 @@ li {
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
+}
+
+.barcelona {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.munich {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+/*  */
+.istanbul {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.rome {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.bologna {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+/*  */
+.curitiba {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.rio-de-janeiro {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.mexico-city {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.city-center-desc {
+    padding: 1.2em;
+}
+
+.btn-small {
+    float: right;
+    background-color: #2679e6;
+    color: white;
+    font-size: 10px;
+    border-radius: 4px;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    /* height: 3em; */
+}
+
+.btn-small:hover {
+    cursor: pointer;
+    background-color: #1662C6;
+}
+
+
+/* city-bottom */
+.city-bottom {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.city-bottom > h1 {
+    color: black;
+}
+
+.city-bottom > button {
+    background-color: #2679e6;
+    color: white;
+    font-size: 10px;
+    border-radius: 4px;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    width: 180px;
+    height: 50px;
+}
+
+
+/* footer */
+footer {
+    position: relative;
+    display: inline;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 12px;
+    color: #ABABAB;
+    /* padding: 16px 0; */
 }
