@@ -249,40 +249,6 @@ h1 {
     color: black;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* container-logo */
 .container-logo {
     display: flex;
@@ -336,41 +302,44 @@ li {
     background-image: url(./img/docplanner-logo-big.png);
     background-repeat: no-repeat;
     background-position: bottom -65% left 13%;
+    position: relative;
+    z-index: 1;
 }
 
-.max-height {
-    min-height: 78vh;
-    padding-bottom: 18px;
-}
-
-.info-wrapper {
+.info-wrapper-all {
     padding-top: 25px;
     display: flex;
 }
 
-.info-left {
-    width: 50%;
+.max-height {
+    min-height: 78vh;
 }
+.info-left {
+    width: 45%;
+}
+
 
 .info-wrapper-right {
-    min-height: 100%;
-    width: 60%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: right;
-}
-
-.info-right-content {
-    display: flex;
-    flex-basis: calc(50% - 50px); /* width */
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+    position: relative;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(2, 230px);
+    grid-template-areas: 
+        "box-1 box-2"
+        "box-3 box-4";
+    width: 55%;
+    gap: 40px 90px;
+    margin-top: 20px;
 }
 
-.info-right-content > h3 {
+.info-content-right {
+    text-align: center;
+    padding-top: 30px
+}
+
+.info-content-right > h3 {
     font-family: 'Work Sans', sans-serif;
     font-size: 25px;
     color: #00B39B;
@@ -378,11 +347,30 @@ li {
     margin: 10px 0;
 }
 
-.info-right-content > p {
+.info-content-right > p {
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
     color: #747474;
     font-weight: 300;
+}
+
+
+.box-1 {
+    grid-area: box-1;
+}
+
+.box-2 {
+    grid-area: box-2;
+    align-self: end;
+}
+
+.box-3 {
+    grid-area: box-3;
+}
+
+.box-4 {
+    grid-area: box-4;
+    align-self: end;
 }
 
 .box-1,
@@ -390,30 +378,19 @@ li {
 .box-3,
 .box-4 {
     background-color: #FFFFFF;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     border-radius: 5px;
-    padding-top: 0;
-    padding-bottom: 0;
+    margin-top: 10px;
+    /* padding-top: 0;
+    padding-bottom: 0; */
 }
 
-.box-2,
+/* .box-2,
 .box-4 {
-    margin-left: 22px;
-}
-
-.box-3,
-.box-4 {
-    margin-top: 5px;
-}
-
-.box-1 {
-    align-self: flex-end;
-}
-
-.box-3 {
-    align-self: flex-end;
-    margin-bottom: 20px;
-}
+    margin-top: 100px;
+    top: 100;
+} */
 
 #flag {
     width: 32px;
@@ -461,9 +438,15 @@ li {
 
 .city-center {
     display: grid;
+    position: relative;
     grid-template-columns: repeat(3, 310px);
     grid-template-rows: 270px 25px 270px 25px 270px 25px;
     grid-gap: 30px;
+}
+
+.city-center-a {
+    text-decoration: none;
+    /* box-shadow: ; */
 }
 
 .city-center-img > img {
@@ -546,16 +529,14 @@ li {
     font-size: 10px;
     border-radius: 4px;
     margin: 0;
-    padding: 5px;
-    /* text-align: center; */
+    padding: 8px 15px;
     position: relative;
-    text-decoration: none;
-    /* height: 3em; */
 }
 
 .btn-small:hover {
     cursor: pointer;
     background-color: #1662C6;
+    border-radius: 4px;
 }
 
 
