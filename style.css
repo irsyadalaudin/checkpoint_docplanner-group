@@ -51,7 +51,7 @@ nav {
 
 #about-us,
 #carrer,
-.dropdown-nav-text-icon > a {
+.dropdown-nav-text > a {
     padding: 0 10px;
     text-decoration: none;
     font-size: 15px;
@@ -62,15 +62,16 @@ nav {
 }
 
 #carrer, 
-.dropdown-nav-text-icon > a {
+.dropdown-nav-text > a {
     color: #ababab;
 }
 
 #carrer:hover, 
-.dropdown-nav-text-icon > a:hover {
+.dropdown-nav-text > a:hover {
     color: #00B39B;
 }
 
+/* DROPDOWN PROCESS */
 .dropdown-nav {
     display: flex;
     position: relative;
@@ -83,7 +84,7 @@ nav {
     padding: 10px 5px;
     margin-top: 20px;
     margin-left: -100px;
-    display: none;  /* FOR ELIMINATE TEMPORARILY */
+    display: none;                      /* FOR ELIMINATE TEMPORARILY */
     box-shadow: 1px 1px 1px 1px grey;
 }
 
@@ -145,14 +146,8 @@ h1 {
 /* container-card */
 .container-card {
     display: flex;
-    /* height: 345px; */
-    /* width: 980px; */
     overflow: hidden;
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-content: center; */
     margin-top: 80px;
-    /* flex-direction: row */
 }
 
 .card {
@@ -166,8 +161,36 @@ h1 {
     width: 100%;
 }
 
-.card > h1 {
-    /* font-weight: 400; */
+.left {
+    background-color: #00CCB1;
+}
+
+.middle {
+    background-color: #3D83DF;
+}
+
+.right {
+    background-color: #1B2734;
+}
+
+.card-content-left > img {
+    width: 30px;
+    height: 22px;
+}
+
+.card-content-middle > img {
+    width: 25px;
+    height: 25px;
+}
+
+.card-content-right > img {
+    width: 25px;
+    height: 25px;
+}
+
+.card-content-left > h1,
+.card-content-middle > h1,
+.card-content-right > h1 {
     color: white;
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
@@ -176,57 +199,88 @@ h1 {
     padding-top: 10px;
 }
 
-.card > p {
+.card-content-left > p,
+.card-content-middle > p,
+.card-content-right > p {
     color: white;
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
-    font-size: 1.5em;
+    font-size: 24px;
     padding-top: 20px;
-
 }
 
-.dropdown-card {
-    border: 3px solid #8AC007;
-    display: flex;
-    justify-content: center;
-    flex-basis: 100px;
-    justify-content: left;
-    align-items: flex-end;
-    position: relative;
+#dropdown-select-left,
+#dropdown-select-middle {
+    margin-top: 70px;
+    width: 150px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    text-decoration: underline;
 }
 
-.dropdown-right {
-    margin-bottom: 10px;
+#dropdown-select-right {
+    margin-top: 20px;
+    width: 150px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    text-decoration: underline;
 }
 
-/* background: no-repeat url(/icons/icon-caret-white.svg) 50% 50%; */
-
-.left {
-    background-color: #00CCB1;
+#dropdown-select-right-2 {
+    margin-top: 10px;
+    width: 200px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    text-decoration: underline;
 }
 
-.left > img {
-    width: 30px;
-    height: 22px;
+#dropdown-select-left > option,
+#dropdown-select-middle > option,
+#dropdown-select-right > option {
+    color: black;
 }
 
-.middle {
-    background-color: #3D83DF;
-}
 
-.middle > img {
-    width: 25px;
-    height: 25px;
-}
 
-.right {
-    background-color: #1B2734;
-}
 
-.right > img {
-    width: 25px;
-    height: 25px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* container-logo */
@@ -274,6 +328,7 @@ li {
 .img-color:hover {
     filter: grayscale(0);
 }
+
 
 /* container-info */
 .container-info {
@@ -381,12 +436,6 @@ li {
 }
 
 
-
-
-
-
-
-
 /* container-city */
 .city-up {
     text-align: center;
@@ -412,14 +461,10 @@ li {
 
 .city-center {
     display: grid;
-    grid-template-columns: repeat(3, 300px);
+    grid-template-columns: repeat(3, 310px);
     grid-template-rows: 270px 25px 270px 25px 270px 25px;
     grid-gap: 30px;
 }
-
-/* .city-center:hover {
-
-} */
 
 .city-center-img > img {
     border-radius: 5px;
@@ -490,18 +535,21 @@ li {
 
 .city-center-desc {
     padding: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .btn-small {
-    float: right;
     background-color: #2679e6;
     color: white;
     font-size: 10px;
     border-radius: 4px;
     margin: 0;
     padding: 5px;
-    text-align: center;
+    /* text-align: center; */
     position: relative;
+    text-decoration: none;
     /* height: 3em; */
 }
 
