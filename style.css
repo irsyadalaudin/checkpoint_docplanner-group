@@ -4,6 +4,7 @@
     font-family: 'Roboto', sans-serif;
     color: #747474;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 /* header */
@@ -354,12 +355,14 @@ h1 {
 
 /* container-info */
 .container-info {
-    background-color: #d5f4f1;
+    background-color: #D5F4F1;
     background-image: url(./img/docplanner-logo-big.png);
     background-repeat: no-repeat;
     background-position: bottom -65% left 13%;
+    background-size: auto;
     position: relative;
     z-index: 1;
+    height: auto;
 }
 
 .info-wrapper-all {
@@ -370,7 +373,8 @@ h1 {
 .max-height {
     min-height: 78vh;
 }
-.info-left {
+
+.info-content-left {
     width: 45%;
 }
 
@@ -456,6 +460,12 @@ h1 {
 #doctors {
     width: 40px;
     height: 40px;
+}
+
+#patients,
+#visits,
+#doctors {
+    margin-top: 20px;
 }
 
 /* container-city */
@@ -650,3 +660,7 @@ footer {
     background-color: #1662C6;
     border-radius: 4px;
 }
+
+/* @media all and (max-width: 1057px) { 
+
+} */
