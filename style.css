@@ -154,7 +154,7 @@ h1 {
     border-radius: 10px;
     margin: 0 10px;
     min-height: 300px;
-    width: 100%;
+    width: 500px;
 }
 
 .left {
@@ -249,7 +249,7 @@ h1 {
 
 /* container-logo */
 .container-logo {
-    display: flex;
+    display: flex; 
 }
 
 .container-logo > h1 {
@@ -265,6 +265,13 @@ h1 {
     grid-template-columns: repeat(4, 170px);
     grid-template-rows: repeat(3, 60px);
     margin-top: 50px;
+}
+
+.logo-a {
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    margin: 0;
 }
 
 .svg-color {        
@@ -584,7 +591,7 @@ h1 {
 
 .city-center-desc {
     margin: 0;
-    padding: 1.2em;
+    padding: 19.2px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -661,54 +668,307 @@ footer {
     border-radius: 4px;
 }
 
+/* RESPONSIVE */
 @media all and (max-width: 1023px) {
     .max-width {
         max-width: 1023px;
     }
-
-    /* #dropdown-select-left {
-        margin-top: 50px;
-    } */
 }
 
-/* @media all and (max-width: 1014px) {
-    #dropdown-select-left {
-        margin-top: 25px;
+@media all and (max-width: 983px) {
+    .logo {
+        grid-template-columns: repeat(4, 150px);
+    }
+    
+    .info-content-left {
+        width: 40%;
+    }
+    
+    .info-wrapper-right {
+        width: 60%;
+    }
+    
+    .city-center {
+        position: relative;
+        grid-template-columns: repeat(3, 301px);
+    }
+    
+    .city-center-img > img {
+        width: 280px;
+    }
+    
+    .city-center-desc {
+        width: 241px;
+        justify-content: space-between;
     }
 }
 
-@media all and (max-width: 1000px) {
-    #dropdown-select-middle {
-        margin-top: 50px;
+@media all and (max-width: 515px) {
+    * {
+        max-width: 515px;
     }
- }
 
- @media all and (max-width: 944px) {
-    #dropdown-select-right {
-        margin-top: 10px;
+    header {
+        height: 120px;
     }
- }
 
- @media all and (max-width: 900px) {
-    #dropdown-select-left {
-        margin-top: 30px;
+    #docplanner-group-home {
+        margin-bottom: 10px;
     }
- }
 
- @media all and (max-width: 836px) {
-    #dropdown-select-middle {
-        margin-top: 30px;
+    .container-introduction {
+        margin-top: 150px;
     }
- }
 
- @media all and (max-width: 796px) {
-    #dropdown-select-left {
-        margin-top: 33px;
+    .introduction-down {
+        flex-direction: column;
     }
- }
 
- @media all and (max-width: 782px) {
-    #dropdown-select-left {
-        margin-top: 10px;
+    .introduction-down > p {
+        width: 100%;
     }
- } */
+
+    .container-card {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 370px;
+    }
+
+    .middle,
+    .right {
+        margin-top: 20px;
+    }
+
+    .container-logo {
+        flex-direction: column;
+    }
+
+    .container-logo > h1 {
+        width: 100%;
+        margin-left: 5px;
+        text-align: center;
+    }
+
+    .logo {
+        width: 100%;
+        grid-template-columns: repeat(3, 150px);
+        grid-template-rows: repeat(4, 50px);
+        margin: 50px 0;
+        /* margin-top: 50px;
+        margin-bottom: 50px; */
+        justify-content: center;
+    }
+
+    #one {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:  1;
+        grid-row-end: 2;
+    }
+    
+    #two {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start:  1;
+        grid-row-end: 2;
+    }
+    
+    #three {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start:  1;
+        grid-row-end: 2;
+    }
+    
+    #four {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:  2;
+        grid-row-end: 3;
+    }
+    
+    #five {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start:  2;
+        grid-row-end: 3;
+    }
+    
+    #six {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start:  2;
+        grid-row-end: 3;
+    }
+    
+    #seven {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:  3;
+        grid-row-end: 4;
+    }
+    
+    #eight {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start:  3;
+        grid-row-end: 4;
+    }
+    
+    #nine {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start:  3;
+        grid-row-end: 4;
+        margin: 0;
+    }
+    
+    #ten {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start:  4;
+        grid-row-end: 5;
+    }
+
+    .logo-a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-info {
+        background-position: bottom -50% left -500%;
+        height: auto;
+        max-width: 515px;
+    }
+
+    .info-wrapper-all {
+        /* padding-top: 25px; */
+        flex-direction: column;
+        height: 1300px;
+    }
+    .max-height {
+        min-height: 78vh;
+    }
+
+    .info-content-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-wrapper-right {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    .box-1,
+    .box-2,
+    .box-3,
+    .box-4 {
+        width: 445px;
+        border-radius: 5px;
+    }
+
+    .box-2 {
+        margin-top: -1px;
+    }
+
+    .box-4 {
+        margin-top: -1px;
+    }
+    
+    .city-center {
+        grid-template-columns: 310px;
+        /* grid-template-rows: 290px 30px 290px 30px 290px 30px 290px 30px 290px 30px 290px 30px 290px 30px 290px 30px 290px 30px; */
+        grid-template-rows: repeat(9, 320px);
+        grid-template-areas: "warsaw" "barcelona" "munich" "istanbul" "rome" "bologna" "curitiba" "rio-de-janeiro" "mexico-city";
+        /* grid-row-gap: 0 400px; */
+        justify-content: center;
+        justify-items: center;
+        /* align-items: center; */
+    }
+
+    .warsaw {
+        /* grid-column-start: 1;
+        grid-column-end: 2; */
+        /* grid-row-start: 1;
+        grid-row-end: 2; */
+
+        grid-area: warsaw;
+    }
+    
+    .barcelona {
+        /* grid-column-start: 1;
+        grid-column-end: 2; */
+        /* grid-row-start: 2;
+        grid-row-end: 3; */
+
+        grid-area: barcelona;
+    }
+    
+    .munich {
+        /* grid-column-start: 1;
+        grid-column-end: 2; */
+        /* grid-row-start: 3;
+        grid-row-end: 4; */
+
+        grid-area: munich;
+    }
+    /*  */
+    .istanbul {
+        /* grid-column-start: 1;
+        grid-column-end: 2; */
+        /* grid-row-start: 4;
+        grid-row-end: 5; */
+
+        grid-area: istanbul;
+    }
+    
+    .rome {
+        /* grid-column-start: 1;
+        grid-column-end: 2; */
+        /* grid-row-start: 5;
+        grid-row-end: 6; */
+
+        grid-area: rome;
+    }
+    
+    .bologna {
+        /* grid-column-start: 1;
+        grid-column-end: 2; */
+        /* grid-row-start: 6;
+        grid-row-end: 7; */
+
+        grid-area: bologna;
+    }
+    /*  */
+    .curitiba {
+        /* grid-column-start: 1;
+        grid-column-end: 2; */
+        /* grid-row-start: 7;
+        grid-row-end: 8; */
+
+        grid-area: curitiba;
+    }
+    
+    .rio-de-janeiro {
+        /* grid-column-start: 1;
+        grid-column-end: 2; */
+        /* grid-row-start: 8;
+        grid-row-end: 9; */
+
+        grid-area: rio-de-janeiro;
+    }
+    
+    .mexico-city {
+        /* grid-column-start: 1;
+        grid-column-end: 2; */
+        /* grid-row-start: 9;
+        grid-row-end: 10; */
+
+        grid-area: mexico-city;
+    }
+}
